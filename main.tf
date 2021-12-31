@@ -6,16 +6,15 @@
     }
   }
 }
-
 #pass the creds
 provider "tfe" {
   hostname = var.hostname
   token    = var.token
 }
-
 #create a workspace
 resource "tfe_workspace" "workspace-automation" {
-  name         = var.workspaces
+  for_each     = var.workspaces
+  name         = each.value
   organization = var.org
-  tag_names    = ["test", "app"]
+  tag_names    = ["tfc", "automation"]
 }
