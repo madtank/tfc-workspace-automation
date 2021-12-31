@@ -13,8 +13,8 @@ provider "tfe" {
 }
 #create a workspace
 resource "tfe_workspace" "workspace-automation" {
-  for_each     = var.workspaces
-  name         = each.value
+  count        = length(var.workspaces)
+  name         = var.workspaces[count.index]
   organization = var.org
   tag_names    = ["tfc", "automation"]
 }
