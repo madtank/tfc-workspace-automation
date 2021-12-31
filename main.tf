@@ -1,7 +1,3 @@
-#for provisioning tfc
-#https://registry.terraform.io/providers/hashicorp/tfe/latest
-#https://registry.terraform.io/providers/hashicorp/tfe/latest/docs
-
   terraform {
   required_providers {
     tfe = {
@@ -19,7 +15,7 @@ provider "tfe" {
 
 #create a workspace
 resource "tfe_workspace" "workspace-automation" {
-  name         = "maddog99-automated-workspace"
+  name         = var.workspaces
   organization = var.org
   tag_names    = ["test", "app"]
 }
