@@ -18,8 +18,8 @@ provider "tfe" {
 }
 
 #create a workspace
-resource "tfe_workspace" "test" {
-  name         = "automated-workspace"
+resource "tfe_workspace" "workspace-automation" {
+  name         = "maddog99-automated-workspace"
   organization = var.org
   tag_names    = ["test", "app"]
 }
