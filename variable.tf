@@ -10,7 +10,7 @@ variable "token" {
 }
 variable "org" {
   type          = string
-  description   = "Default Org"
+  description   = "Your TFC Org Name, add in automtion Workspace"
 }
 variable "workspaces" {
   description = "list of workspaces to create"
