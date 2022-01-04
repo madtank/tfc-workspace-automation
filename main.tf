@@ -28,5 +28,5 @@ resource "tfe_team" "test" {
 resource "tfe_team_access" "test" {
   access       = "read"
   team_id      = tfe_team.test.id
-  workspace_id = tfe_workspace.test.id
+  workspace_id = tfe_workspace.test[count.index]
 }
