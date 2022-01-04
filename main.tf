@@ -20,12 +20,13 @@ resource "tfe_workspace" "test" {
   tag_names    = ["tfc", "automation"]
 }
 
-/* add for teams
+
 resource "tfe_team" "test" {
-  name         = "my-team-name"
+  name         = "maddogs"
   organization = var.org
 }
 
+/*
 resource "tfe_team_access" "test" {
   access       = "read"
   team_id      = tfe_team.test.id
