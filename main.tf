@@ -15,7 +15,7 @@ provider "tfe" {
 #create a workspace
 resource "tfe_workspace" "test" {
   count        = length(var.workspaces)
-  name         = "dev-${var.workspaces[count.index]}"
+  name         = "${var.env}-${var.workspaces[count.index]}"
   organization = var.org
   tag_names    = ["tfc", "automation"]
 }
