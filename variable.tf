@@ -11,7 +11,6 @@ variable "token" {
 variable "org" {
   type          = string
   description   = "Default Org"
-  default       = "maddog99"
 }
 variable "workspaces" {
   description = "list of workspaces to create"
