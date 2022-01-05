@@ -19,5 +19,4 @@ variable "env" {
 variable "workspaces" {
   description = "list of workspaces to create"
   type        = list(string)
-  default = ["workspace-1", "workspace-2", "workspace-3"]
 }

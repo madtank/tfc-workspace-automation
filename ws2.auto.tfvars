@@ -1,0 +1,1 @@
+  workspaces = ["ws2-a", "ws2-b", "ws2-c"]
